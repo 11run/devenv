@@ -13,8 +13,8 @@ services:
     volumes:
       - type: bind
         source: ./repositories/python-hello
-        target: /home/user/workspace
+        target: /home/user/python-hello
         bind:
           create_host_path: true
-    working_dir: /home/user/workspace
+    working_dir: /home/user/python-hello
     tty: true

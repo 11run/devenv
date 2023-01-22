@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "hello"
+version = "0.1.0"
+description = "hello world"
+authors = ["11run <94275190+11run@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+say = "hello.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.12.0"
+mypy = "^0.991"
+ipython = "^8.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
