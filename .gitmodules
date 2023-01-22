@@ -1,0 +1,3 @@
+[submodule "dockerfiles/devenv-py"]
+	path = dockerfiles/devenv-py
+	url = git@github.com:11run/devenv-py.git
