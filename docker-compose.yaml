@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  python-hello:
+    build:
+      context: ./dockerfiles/devenv-py
+      dockerfile: Dockerfile
+      args:
+        VERSION: 3.11.1-bullseye
+        USER_NAME: user
+        UID: ${UID:?err}
+        GID: ${GID:?err}
+    volumes:
+      - type: bind
+        source: ./repositories/python-hello
+        target: /home/user/workspace
+        bind:
+          create_host_path: true
+    working_dir: /home/user/workspace
+    tty: true
